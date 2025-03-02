@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Brain Tumor Detection</h1>
+        <p>Upload an MRI image to check for brain tumors.</p>
+
+        <form id="uploadForm" action="/" method="post" enctype="multipart/form-data">
+            <label for="fileInput" class="upload-btn">Choose Image</label>
+            <input type="file" name="file" id="fileInput" required hidden>
+            <span id="fileName">No file chosen</span>
+            <button type="submit" id="uploadBtn" class="predict-btn" disabled>Upload & Predict</button>
+        </form>
+
+        <div id="loading" class="hidden">
+            <p>Processing...</p>
+            <div class="spinner"></div>
+        </div>
+
+        {% if result %}
+        <div class="result">
+            <h2>Prediction: <span>{{ result }}</span></h2>
+            <h3>{{ tumor_status }}</h3>
+            <h4>Confidence: {{ confidence | round(2) }}%</h4>
+
+            {% if image %}
+                <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Uploaded MRI Image">
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
