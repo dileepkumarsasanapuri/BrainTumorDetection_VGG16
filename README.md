@@ -1,5 +1,6 @@
-Brain Tumor Detection Using VGG16
-This project implements brain tumor classification using VGG16 as a deep learning model. The model is trained on MRI scan images to classify brain tumors into different categories.
+##Brain Tumor Detection Using VGG16
+ This project implements brain tumor classification using VGG16 as a deep learning model. The model is trained on MRI scan images to classify brain tumors into 
+different categories.
 
 📌 Features
 ✅ Pre-trained VGG16 model for accurate classification
@@ -42,9 +43,9 @@ pip install -r requirements.txt
 4️⃣ Run Flask Application
 python app.py
 
-## create a folder named "saved_models" in the directory - 
+#create a folder named "saved_models" in the directory - 
    for saving the trained model and to load the model for prediction
-# The app will run at http://127.0.0.1:5000/
+The app will run at http://127.0.0.1:5000/
 
 🖼️ Usage
 Open the web app in your browser.
@@ -60,3 +61,4 @@ Classes:
     Meningioma
     Pituitary
     No Tumor
+
