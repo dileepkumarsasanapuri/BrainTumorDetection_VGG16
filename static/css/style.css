@@ -1,4 +1,4 @@
-/* General Styling */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -16,12 +16,12 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Header */
+
 h1 {
     color: #333;
 }
 
-/* Form Styling */
+
 .upload-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -76,7 +76,6 @@ h1 {
     100% { transform: rotate(360deg); }
 }
 
-/* Result Section */
 .result {
     margin-top: 20px;
 }
