@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import sys
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 #loading trained model by vgg16_brain_tumor.py 
 model = tf.keras.models.load_model("saved_model/brain_tumor_vgg16_final.keras", compile=False)
 
