@@ -1,4 +1,7 @@
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+import os
 import numpy as np
 import cv2
 import gdown
