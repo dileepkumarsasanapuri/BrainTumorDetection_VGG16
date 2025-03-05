@@ -1,5 +1,3 @@
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 import os
 import numpy as np
@@ -8,6 +6,8 @@ import gdown
 import tensorflow as tf
 from flask import Flask, render_template, request
 
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 app = Flask(__name__)
 
 
